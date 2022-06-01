@@ -18,7 +18,6 @@ def bot(request):
 
         for i in questions:
             fuzzy_response = fuzz.ratio(user_text, i.question_text)
-            print(user_text)
             if fuzzy_response >= 70:
                 return HttpResponse(json.dumps({'is_data': i.chevy_words}), content_type='application/json')
         
@@ -26,7 +25,6 @@ def bot(request):
             text_fuzz = fuzz.token_sort_ratio(user_text, i.keyword)
             if text_fuzz >= 33:
                 if fuzz.WRatio(i.keyword, user_text):
-                    print(i)
                     lists.append([i.theme, i.keyword])
         
         return HttpResponse(json.dumps({"not_data": lists}), content_type='application/json')
