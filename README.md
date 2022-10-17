@@ -1,11 +1,9 @@
 # Game agent
-Дипломная работа. Разработка игрового педагогического агента для обучения программированию.
-
-Версии: 
+Versions of languages: 
 `    Python 3.9.5,
     Django 4.0.1`
 
-Для запуска необходимо:
+To start application, do the following:
 
     pip install django
     pip install django-crispy-forms
@@ -15,6 +13,6 @@
     pip install fuzzywuzzy
     pip install requests
     
-Или можно проще:
+Or:
 
     pip install -r packages_list.txt
